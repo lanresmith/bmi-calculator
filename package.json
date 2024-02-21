@@ -47,6 +47,7 @@
     ]
   },
   "devDependencies": {
+    "@testing-library/react": "^12.1.5",
     "codecov.io": "^0.1.6",
     "coveralls": "^3.0.11",
     "cypress": "^3.8.3",
@@ -54,6 +55,8 @@
     "enzyme-adapter-react-16": "^1.15.2",
     "eslint-plugin-cypress": "^2.10.3",
     "gh-pages": "^2.2.0",
-    "jest-enzyme": "^7.1.2"
+    "jest-canvas-mock": "^2.5.2",
+    "jest-enzyme": "^7.1.2",
+    "jest-react-profiler": "^0.1.3"
   }
 }
