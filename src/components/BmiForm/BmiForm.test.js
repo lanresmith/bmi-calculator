@@ -1,5 +1,5 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { mount } from "enzyme";
 import BmiForm from "./BmiForm";
 
 describe("BmiForm Component", () => {
@@ -9,7 +9,7 @@ describe("BmiForm Component", () => {
   };
 
   beforeEach(() => {
-    wrapper = shallow(<BmiForm {...prop} />);
+    wrapper = mount(<BmiForm {...prop} />);
   });
 
   it("renders", () => {
@@ -29,7 +29,10 @@ describe("BmiForm Component", () => {
   });
 
   it("should call change", () => {
-    wrapper.find("button").simulate("click");
+    /**
+     * @see {@link https://github.com/enzymejs/enzyme/issues/308#issuecomment-291604063}
+     */
+    wrapper.find("button").simulate("submit");
     expect(prop.change).toHaveBeenCalledTimes(1);
   });
 });

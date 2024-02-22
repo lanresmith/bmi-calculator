@@ -14,7 +14,7 @@ describe("Bar component", () => {
   };
 
   beforeEach(() => {
-    wrapper = mount(<Bar {...prop} />);
+    wrapper = mount(<Bar chartData={prop} />);
   });
 
   it("renders", () => {
